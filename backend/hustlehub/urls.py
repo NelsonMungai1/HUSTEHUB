@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # path('api/v1/', include('accounts.urls')),
+    path('api/v1/', include('job_posting.urls')),
     path('api/v1/accounts/', include('dj_rest_auth.urls')),
     path('api/v1/accounts/registration/', include('dj_rest_auth.registration.urls')),
 ]
