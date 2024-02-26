@@ -41,4 +41,7 @@ Dashboard for administrators to manage users (can delete a user , approve regist
 ### Class diagram
 ![Class Diagram](/Diagrams/class_diagram.png)
 
+### Clients' landing page
+![Client home page](/Diagrams/clients'_landing_page.png)
+
 
