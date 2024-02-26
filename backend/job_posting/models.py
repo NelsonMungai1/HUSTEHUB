@@ -15,6 +15,7 @@ class JobCategory(models.Model):
 class JobWorker(models.Model):
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
+    profile_pic = models.ImageField(upload_to='profile_pics', default='profile_pics/default.jpeg')
     description = models.TextField()
     price = models.FloatField()
     job_category = models.ForeignKey(JobCategory, on_delete=models.CASCADE)
