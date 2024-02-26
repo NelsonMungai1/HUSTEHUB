@@ -7,6 +7,8 @@ name = "pypi"
 django = "*"
 djangorestframework = "*"
 dj-rest-auth = {extras = ["with_social"], version = "*"}
+django-rest-swagger = "*"
+drf-yasg = "*"
 
 [dev-packages]
 

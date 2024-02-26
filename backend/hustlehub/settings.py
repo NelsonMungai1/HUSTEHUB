@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # Third parties
     'rest_framework',
+    'rest_framework_swagger',
     'rest_framework.authtoken',
     'dj_rest_auth',
     'django.contrib.sites',
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'dj_rest_auth.registration',
+    'drf_yasg',
 ]
 
 SITE_ID = 1
