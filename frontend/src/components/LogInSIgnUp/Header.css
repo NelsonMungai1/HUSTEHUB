@@ -6,6 +6,9 @@
     align-items: center;
     color:whitesmoke;
   }
+li{
+    cursor: pointer;
+  }
   
   .logo {
     font-size: 1.5rem;

@@ -28,29 +28,54 @@ function TabbedForm() {
 }
 
 function Form1() {
-    
-    const [action,setAction]=useState("Sign Up");
+  const [action,setAction]=useState("Login");
   return (
     <div className="container">
-        < div className="header">
+        <div className="header">
             <div className="text">{action}</div>
-            <div className='underline'></div>
         </div>
-        <div className='inputs'>
-            {action==="Login"?<div></div>:<div className='input'>
-                <img src={user_icon} alt="/"/>
-                <input type="text" placeholder='Name'/>
-            </div>}
+            {action==="Login"?(
+          <div className='inputs'>
             <div className='input'>
-                <img src={email_icon} alt="/"/>
-                <input type="email" placeholder='Email Id'/>
+              <img src={email_icon} class=""alt="/"/>
+              <input type="email" placeholder='Email Id'/>
             </div>
             <div className='input'>
                 <img src={password_icon} alt="/"/>
                 <input type="password" placeholder='password'/>
             </div>
-        </div>
-        {action==="Sign Up"?<div></div>:<div className="forgot-password">Forgot password?<span>Click here</span></div>}
+            
+        </div>)
+        :(
+          <div className='inputs'>
+            <div className='input'>
+                <input type="text" placeholder='Username'/>
+                <input type="text" placeholder='Full Name'/>
+            </div>
+            <div className='input'>
+                <input type="text" placeholder='Email'/>
+                <input type="text" placeholder='Phone Number'/>
+            </div>
+            <div className='input'>
+                <input type="password" placeholder='PassWord'/>
+                <input type="password" placeholder='Confirm'/>
+            </div>
+            <div>
+              <label for="male">Male</label>
+              <input type="radio" id="male" name="male"laceholder='PassWord'/>
+              
+              <label for="female">Female</label>
+              <input type="radio" id="female" name="female" placeholder='PassWord'/>
+              
+            </div>
+            <div className="forgot-password"onClick={()=>{setAction("Login")}}><span>Already have an account?</span></div>
+    
+          </div>)}
+            
+        {action==="Sign Up"?<div></div>:(
+        <><div className="forgot-password">Forgot password?<span>Click here</span></div>
+        <div className="forgot-password" onClick={()=>{setAction("Sign Up")}}><span>Don't have an account?</span></div>
+        </>)}
         
         <div className="submit-container">
             {/* dynamic assignment of class names */}
@@ -67,25 +92,51 @@ function Form2() {
     const [action,setAction]=useState("Sign Up");
   return (
     <div className="container">
-        < div className="header">
+        <div className="header">
             <div className="text">{action}</div>
-            <div className='underline'></div>
         </div>
-        <div className='inputs'>
-            {action==="Login"?<div></div>:<div className='input'>
-                <img src={user_icon} alt="/"/>
-                <input type="text" placeholder='Name'/>
-            </div>}
+            {action==="Login"?(
+          <div className='inputs'>
             <div className='input'>
-                <img src={email_icon} alt="/"/>
-                <input type="email" placeholder='Email Id'/>
+              <img src={email_icon} class=""alt="/"/>
+              <input type="email" placeholder='Email Id'/>
             </div>
             <div className='input'>
                 <img src={password_icon} alt="/"/>
                 <input type="password" placeholder='password'/>
             </div>
-        </div>
-        {action==="Sign Up"?<div></div>:<div className="forgot-password">Forgot password?<span>Click here</span></div>}
+            
+        </div>)
+        :(
+          <div className='inputs'>
+            <div className='input'>
+                <input type="text" placeholder='Username'/>
+                <input type="text" placeholder='Full Name'/>
+            </div>
+            <div className='input'>
+                <input type="text" placeholder='Email'/>
+                <input type="text" placeholder='Phone Number'/>
+            </div>
+            <div className='input'>
+                <input type="password" placeholder='PassWord'/>
+                <input type="password" placeholder='Confirm'/>
+            </div>
+            <div className='input files'>
+                <label for="cv">Upload CV</label>
+                <input name="cv" id="cv"type="file" placeholder='Upload C'/>
+            </div>
+            <div className='input files'>
+                <label for="id">Upload ID Image</label>
+                <input name="id" id="id"type="file" placeholder='Upload C'/>
+            </div>
+            <div className="forgot-password"onClick={()=>{setAction("Login")}}><span>Already have an account?</span></div>
+    
+          </div>)}
+            
+        {action==="Sign Up"?<div></div>:(
+        <><div className="forgot-password">Forgot password?<span>Click here</span></div>
+        <div className="forgot-password" onClick={()=>{setAction("Sign Up")}}><span>Don't have an account?</span></div>
+        </>)}
         
         <div className="submit-container">
             {/* dynamic assignment of class names */}
@@ -94,7 +145,8 @@ function Form2() {
         </div>
 
     </div>
-  )
+  )   
+    
 }
 
 function Form3() {
