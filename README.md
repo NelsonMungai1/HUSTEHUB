@@ -42,12 +42,3 @@ Dashboard for administrators to manage users (can delete a user , approve regist
 ![Class Diagram](/Diagrams/class_diagram.png)
 
 
-
-
-
-
-
-
-=======
-# HUSTLEHUB
-temporary_logins_signups
