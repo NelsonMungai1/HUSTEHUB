@@ -36,7 +36,7 @@ Dashboard for administrators to manage users (can delete a user , approve regist
 - Draw.io: system design/ UML diagrams
 - Slack: workspace for collaboration and communication
 
-## Design / UML diagrams
+## Design
 
 ### Class diagram
 ![Class Diagram](/Diagrams/class_diagram.png)
