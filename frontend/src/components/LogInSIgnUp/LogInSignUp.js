@@ -14,7 +14,7 @@ const LogInSignUp = () => {
 
     const handleSignUp = async () => {
         try {
-            const response = await axios.post('https://dummyjson.com/auth/login', {
+            const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/registration/', {
                 name,
                 email,
                 password,
@@ -27,7 +27,7 @@ const LogInSignUp = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await axios.post('https://dummyjson.com/auth/login', {
+            const response = await axios.post('http://127.0.0.1:8000/api/v1/accounts/login/', {
                 email,
                 password,
             });
