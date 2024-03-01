@@ -7,6 +7,8 @@ const Card = ({ img, title, star, ratings, prevPrice, newPrice }) => {
         <img src={img} alt={title} className="card-img" />
         <div className="card-details">
           <h3 className="card-title">{title}</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, magni harum consequatur maiores pariatur praesentium rem tempora vel laborum, iure dolorem ipsa illo, ex perspiciatis porro. Aut laborum illo magnam?
+          </p>
           <section className="card-reviews">
             {star} {star} {star} {star}
             <span className="total-reviews">Ratings: {ratings}</span>
