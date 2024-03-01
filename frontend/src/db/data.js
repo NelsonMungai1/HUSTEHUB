@@ -1,0 +1,60 @@
+import { AiFillStar } from "react-icons/ai";
+
+const data = [
+  {
+    img:require('./laundry_beauty.png'),
+    title: "Laundry",
+    star: <AiFillStar className="rating-star" />,
+    ratings:"3",
+    prevPrice: "$20",
+    newPrice: "30",
+    company: "Nike",
+    color: "white",
+    category: "Laundry",
+  },
+  {
+    img:require('./electrician.png'),
+    title: "Electrician",
+    star: <AiFillStar className="rating-star" />,
+    ratings:"4",
+    prevPrice: "$140,00",
+    newPrice: "200",
+    company: "Nike",
+    color: "red",
+    category: "Electrician",
+  },
+
+  {
+    img:require('./bro_carpenter.png'),
+    title: "Carpenter",
+    star: <AiFillStar className="rating-star" />,
+    ratings:"3",
+    prevPrice: "$140,00",
+    newPrice: "200",
+    company: "Nike",
+    color: "green",
+    category: "Carpenter",
+  },
+  {
+    img:require('./illustration-wrench.png'),
+    title: "Plumber",
+    star: <AiFillStar className="rating-star" />,
+    ratings:"2",
+    prevPrice: "$140,00",
+    newPrice: "200",
+    company: "Adidas",
+    color: "black",
+    category: "Plumber",
+  },
+  {
+    img:require("./mover_avatar.png"),
+    title: "Mover",
+    star: <AiFillStar className="rating-star" />,
+    ratings:"3",
+    prevPrice: "$140,00",
+    newPrice: "200",
+    company: "Vans",
+    color: "green",
+    category: "Mover",
+  }]
+export default data;

@@ -1,42 +1,36 @@
-import React, { useState } from 'react'
-import './LogInSignUp.css'
+import React, { useState } from 'react';
+import './Header.css'
+import logo from "../Assets/logo.png";
+import accountIcon from "../Assets/person.png";
+import TabbedForm from './BsTabs'; 
+const LogInSIgnUp=()=>{
+    const [showForms,setShowForms]=useState(false);
+    const toggleForms=()=>{
+        setShowForms(!showForms);
+    };
 
-import user_icon from '../Assets/person.png'
-import email_icon from '../Assets/email.png'
-import password_icon from '../Assets/password.png'
-const LogInSignUp = () => {
-
-    const [action,setAction]=useState("Sign Up");
-  return (
-    <div className="container">
-        < div className="header">
-            <div className="text">{action}</div>
-            <div className='underline'></div>
-        </div>
-        <div className='inputs'>
-            {action==="Login"?<div></div>:<div className='input'>
-                <img src={user_icon} alt="/"/>
-                <input type="text" placeholder='Name'/>
-            </div>}
-            <div className='input'>
-                <img src={email_icon} alt="/"/>
-                <input type="email" placeholder='Email Id'/>
+    return(
+        <>
+        <header className="header">
+            <div className="logo">
+                <img src={logo} alt="Lo go"/>
             </div>
-            <div className='input'>
-                <img src={password_icon} alt="/"/>
-                <input type="password" placeholder='password'/>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about">About Us</a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li onClick={toggleForms}><a href="signin">
+                        <i class="fa-solid fa-user"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>        
+        <div className="forms-container show">
+            <TabbedForm/>
         </div>
-        {action==="Sign Up"?<div></div>:<div className="forgot-password">Forgot password?<span>Click here</span></div>}
-        
-        <div className="submit-container">
-            {/* dynamic assignment of class names */}
-            <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>Sign Up</div>
-            <div className={action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Log In</div>
-        </div>
+        </>
 
-    </div>
-  )
+    )
 }
-
-export default LogInSignUp
+export default LogInSIgnUp;

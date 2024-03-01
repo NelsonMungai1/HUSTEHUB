@@ -5,6 +5,11 @@
     justify-content: space-around;
     align-items: center;
     color:whitesmoke;
+    /* position: fixed; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .header nav ul li a{
+    color: #faf2f2;
   }
 li{
     cursor: pointer;
@@ -41,4 +46,5 @@ li{
 }
 .forms-container.show{
     max-height: 1000px;
+    z-index:999;
 }

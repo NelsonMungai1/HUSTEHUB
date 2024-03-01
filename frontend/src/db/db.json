@@ -1,0 +1,164 @@
+{
+  "freelancers": [
+    {
+      "name": "Kamau Njuguna",
+      "rating": 4.8,
+      "certified": true,
+      "gender": "Male",
+      "location": "Nairobi, Kenya",
+      "skill": "Plumbing"
+    },
+    {
+      "name": "Wanjiku Mwangi",
+      "rating": 4.5,
+      "certified": false,
+      "gender": "Female",
+      "location": "Mombasa, Kenya",
+      "skill": "Electrician"
+    },
+    {
+      "name": "Omondi Ochieng",
+      "rating": 4.9,
+      "certified": true,
+      "gender": "Male",
+      "location": "Kisumu, Kenya",
+      "skill": "Welding"
+    },
+    {
+      "name": "Akinyi Odera",
+      "rating": 4.7,
+      "certified": true,
+      "gender": "Female",
+      "location": "Eldoret, Kenya",
+      "skill": "Locksmith"
+    },
+    {
+      "name": "Mwangi Gitonga",
+      "rating": 4.6,
+      "certified": false,
+      "gender": "Male",
+      "location": "Nakuru, Kenya",
+      "skill": "Plumbing"
+    },
+    {
+      "name": "Nyambura Muthoni",
+      "rating": 4.2,
+      "certified": true,
+      "gender": "Female",
+      "location": "Thika, Kenya",
+      "skill": "Electrician"
+    },
+    {
+      "name": "Ochieng Nyabuto",
+      "rating": 4.8,
+      "certified": true,
+      "gender": "Male",
+      "location": "Kisii, Kenya",
+      "skill": "Welding"
+    },
+    {
+      "name": "Auma Wairimu",
+      "rating": 4.5,
+      "certified": false,
+      "gender": "Female",
+      "location": "Nyeri, Kenya",
+      "skill": "Locksmith"
+    },
+    {
+      "name": "Kiprop Kipchirchir",
+      "rating": 4.9,
+      "certified": true,
+      "gender": "Male",
+      "location": "Machakos, Kenya",
+      "skill": "Plumbing"
+    },
+    {
+      "name": "Muthoni Kamau",
+      "rating": 4.7,
+      "certified": true,
+      "gender": "Female",
+      "location": "Kakamega, Kenya",
+      "skill": "Electrician"
+    },
+    {
+      "name": "Gitau Mwangi",
+      "rating": 4.6,
+      "certified": false,
+      "gender": "Male",
+      "location": "Meru, Kenya",
+      "skill": "Welding"
+    },
+    {
+      "name": "Adhiambo Nyakundi",
+      "rating": 4.2,
+      "certified": true,
+      "gender": "Female",
+      "location": "Kitale, Kenya",
+      "skill": "Locksmith"
+    },
+    {
+      "name": "Owiti Ongeri",
+      "rating": 4.8,
+      "certified": true,
+      "gender": "Male",
+      "location": "Kericho, Kenya",
+      "skill": "Plumbing"
+    },
+    {
+      "name": "Atieno Okoth",
+      "rating": 4.5,
+      "certified": false,
+      "gender": "Female",
+      "location": "Malindi, Kenya",
+      "skill": "Electrician"
+    },
+    {
+      "name": "Kipchoge Kibet",
+      "rating": 4.9,
+      "certified": true,
+      "gender": "Male",
+      "location": "Embu, Kenya",
+      "skill": "Welding"
+    },
+    {
+      "name": "Wambui Njeri",
+      "rating": 4.7,
+      "certified": true,
+      "gender": "Female",
+      "location": "Bungoma, Kenya",
+      "skill": "Locksmith"
+    },
+    {
+      "name": "Korir Kipruto",
+      "rating": 4.6,
+      "certified": false,
+      "gender": "Male",
+      "location": "Busia, Kenya",
+      "skill": "Plumbing"
+    },
+    {
+      "name": "Akinyi Auma",
+      "rating": 4.2,
+      "certified": true,
+      "gender": "Female",
+      "location": "Kajiado, Kenya",
+      "skill": "Electrician"
+    },
+    {
+      "name": "Macharia Maina",
+      "rating": 4.8,
+      "certified": true,
+      "gender": "Male",
+      "location": "Narok, Kenya",
+      "skill": "Welding"
+    },
+    {
+      "name": "Wairimu Nduta",
+      "rating": 4.5,
+      "certified": false,
+      "gender": "Female",
+      "location": "Kisii, Kenya",
+      "skill": "Locksmith"
+    }
+  ]
+}
