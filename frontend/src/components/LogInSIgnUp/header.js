@@ -21,7 +21,7 @@ const Header=()=>{
                     <li><a href="about">About Us</a></li>
                     <li><a href="contact">Contact</a></li>
                     <li onClick={toggleForms}><a href="signin">
-                    <i class="fa-solid fa-user"></i></a>
+                    <i className="fa-solid fa-user"></i></a>
                     </li>
                 </ul>
             </nav>
