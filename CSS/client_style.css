@@ -127,12 +127,24 @@ body {
     padding: 5px;
     /* width: 80%; */
 }
+
 .sub-div-headings{
     color: black;
 }
 
 .info {
     font-size: 14px; /* Adjust font size as needed */
+}
+.sub-div2{
+    background-color: bisque;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 5px;
+}
+.info2{
+    font-size: 14px; /* Adjust font size as needed */
+    /* width: 80%; */
 }
 .rate_border{
     background-color: black;
@@ -143,7 +155,23 @@ body {
     padding: 5px;
 
 }
+.review{
+    background-color: rgb(5, 150, 5);
+    color: wheat;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.review:hover{
+    background-color: greenyellow; /* Change background color on hover */
+}
+
 .price_range, .Ratings{
+    color: blue;
     margin: 10px;
+    
 }
 
