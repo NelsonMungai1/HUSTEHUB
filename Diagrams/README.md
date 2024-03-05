@@ -1,1 +1,0 @@
-This folder contains UML diagrams of the project
