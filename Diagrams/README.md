@@ -1,1 +1,1 @@
-This folder contains UML diagrams of the project
+This folder would contain any UML diagrams, ER-diagrams used in the design stage

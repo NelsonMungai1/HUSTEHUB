@@ -1,6 +1,6 @@
 frontend
 # HUSTEHUB
-This is a project done collabortively by *5 members* for the unit: **ICS2309-Commercial programming**
+This is a project done collabortively by 5 members for the unit: **ICS2309-Commercial programming**
 
 ## Problem definition
 - Residents in Juja find it difficult to locate and find skilled laborers (electricians, plumbers, carpenters, cleaners, laptop technicians) from a single point thus Hustle Hub will give our users an easy way to access any of the above technician from just an app.
@@ -28,20 +28,19 @@ Dashboard for administrators to manage users (can delete a user , approve regist
 ## Languages /frameworks and tools used
 - HTML5: create the web pages
 - CSS with Bootstrap framework: styling and creating responsive pages
-- Javascript; React
+- Javascript
 - SQL: database creations and management
-- PHP/ Django
+- PHP
 - Figma: UI/UX design
 - Git and Github: version control
 - Draw.io: system design/ UML diagrams
 - Slack: workspace for collaboration and communication
 
-## Design
+## Design / UML diagrams
 
 ### Class diagram
 ![Class Diagram](/Diagrams/class_diagram.png)
 
-### Clients' landing page
-![Client home page](/Diagrams/clients'_landing_page.png)
 
+=======
 
