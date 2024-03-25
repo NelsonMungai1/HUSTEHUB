@@ -1,11 +1,12 @@
 <?php
 // Establish a database connection
-$con = mysqli_connect("localhost", "root", "", "hustlehub");
+// $con = mysqli_connect("localhost", "root", "", "hustlehub");
 
-// Check if the connection is successful
-if (!$con) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+// // Check if the connection is successful
+// if (!$con) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+include "../DB_connection.php";
 
 // Check if the form was submitted
 if (isset($_POST['techRegister'])) {
