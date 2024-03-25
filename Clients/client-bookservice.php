@@ -1,9 +1,9 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost", "root", "", "hustlehub");
+// $con = mysqli_connect("localhost", "root", "", "hustlehub");
 
 if (isset($_POST['clientFeedback'])) {
-    // include '../DB_connection.php';
+    include '../DB_connection.php';
     
         $cid = $_POST['client_id'];
         $clientname = $_POST['fname'];
