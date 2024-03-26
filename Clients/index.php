@@ -89,7 +89,7 @@ if(isset($_SESSION['fname'])){
 
     .sub-div:hover {
         /*background-color: white; /*Change background color to white on hover */
-        /* border-color: brown; Change border color to green on hover */
+        border-color: red;/* Change border color to green on hover*/
         box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
     }
     .sub-div2 {
