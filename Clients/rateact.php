@@ -18,6 +18,8 @@ if (isset($_SESSION['cid'])) {
         $techinican = gettechnicianById($tid, $conn);
         $initial_rate = $techinican['ratings'];
         $new_rate = ($initial_rate + $review)/2;
+        // Round the new rating to two decimal places
+        $new_rate = round($new_rate, 2);
         // $tid = 4;
 
         $data = 'client id=' . $cid;

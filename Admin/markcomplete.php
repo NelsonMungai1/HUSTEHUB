@@ -14,7 +14,7 @@ if ($jid) {
 
         if ($stmt->rowCount() > 0) {
             $sm = "Mark As read successfully";
-            header("Location: index.php?error=$sm&$data"); // Always exit after header redirect
+            header("Location: index.php?success=$sm&$data"); // Always exit after header redirect
             exit();
         } else {
             throw new Exception("No rows affected by the update.");

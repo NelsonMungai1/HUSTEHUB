@@ -289,7 +289,7 @@ if(isset($_SESSION['username'])){
             </div> 
   
             <div class="box-container" style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 50px;">  
-                <div class="box box1">
+                <div class="box box1" onclick="showTechnicians()">
                     <div class="text"> 
                     <h2 class="topic-heading"><?php echo $sumtechnicians; ?></h2> 
                     <h2 class="topic">Technicians</h2> 
@@ -301,7 +301,7 @@ if(isset($_SESSION['username'])){
                         alt="Views">  -->
                 </div> 
   
-                <div class="box box2"> 
+                <div class="box box2" onclick="showClients()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $sumclients; ?></h2> 
                         <h2 class="topic">Clients</h2> 
@@ -314,7 +314,7 @@ if(isset($_SESSION['username'])){
                 </div>  -->
                 </div>
   
-                <div class="box box3"> 
+                <div class="box box3" onclick="showfeedbacks()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $sumfeedbacks; ?></h2> 
                         <h2 class="topic">Feedbacks</h2> 
@@ -326,7 +326,7 @@ if(isset($_SESSION['username'])){
                         alt="comments">  -->
                 </div> 
   
-                <div class="box box4"> 
+                <div class="box box4" onclick="showapprovals()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $sumapprovals; ?></h2> 
                         <h2 class="topic">Approvals</h2> 
