@@ -31,7 +31,7 @@ Dashboard for administrators to manage users (can delete a user , approve regist
 - Javascript
 - SQL: database creations and management
 - PHP
-- Figma: UI/UX design
+- Figma: UI/UX Design
 - Git and Github: version control
 - Draw.io: system design/ UML diagrams
 - Slack: workspace for collaboration and communication
