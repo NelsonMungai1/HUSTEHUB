@@ -1,6 +1,8 @@
 <?php
 session_start();
-$con=mysqli_connect("localhost","root","","hustlehub");
+// $con=mysqli_connect("localhost","root","","hustlehub");
+include "../DB_connection.php";
+
 if(isset($_POST['adminLogin'])){
 	$username=$_POST['username'];
 	$password=$_POST['password'];

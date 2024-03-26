@@ -3,12 +3,12 @@ from .models import JobWorker, JobCategory
 
 class JobCategorySerializer(serializers.ModelSerializer):
     class Meta:
-        models = JobCategory
-        fields = '__all__'
+        model = JobCategory
+        fields = ['id', 'name']
 
 class JobWorkerSerializer(serializers.ModelSerializer):
     job_category = JobCategorySerializer(many=True)
     
     class Meta:
-        models = JobWorker
-        fields = '__all__'
+        model = JobWorker
+        fields = ['id', 'first_name', 'last_name', 'description', 'price', 'job_category']

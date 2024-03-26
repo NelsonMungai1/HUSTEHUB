@@ -39,7 +39,7 @@ if(isset($_SESSION['fname'])){
 	<title>Client - HUSTLE HUB</title>
 	<!-- <link rel="shortcut icon" type="image/x-icon" href="logos/H_gold_logo.png" /> -->
     <link rel="shortcut icon" type="image/x-icon" href="../logos/H_logo_new.png" />
-    
+    <link rel="stylesheet" href="../CSS/clientstyle2.css">    
 <link rel="stylesheet" type="text/css" href="../CSS/client_style.css">
 <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
@@ -88,8 +88,9 @@ if(isset($_SESSION['fname'])){
     }
 
     .sub-div:hover {
-        background-color: white; /* Change background color to white on hover */
-        border-color: brown; /* Change border color to green on hover */
+        /*background-color: white; /*Change background color to white on hover */
+        /* border-color: brown; Change border color to green on hover */
+        box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
     }
     .sub-div2 {
         /* Your existing styles */
@@ -249,13 +250,19 @@ function showUpdateProfile() {
                             'ratings' => $carpenter['ratings']
                         ]));
                         ?>
-                        <a href="clientservice.php?data=<?= $data ?>">
-                            <div class="sub-div" style="background-image: url('<?= $carpenter['image_location'] ?>'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
+                        <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                            <div class="sub-div">
                                 <div class="info">
-                                    <h6 class="sub-div-headings">Name: <?= $carpenter['fullname'] ?></h6>
-                                    <p>Profession: <?= $carpenter['profession'] ?></p>
-                                    <p><?= $carpenter['jobdescription'] ?></p>
-                                    <p>Availability: <span style="color: <?= ($carpenter['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $carpenter['availability'] ?></span></p>
+                                    <div class="client-card">
+                                        <img src='<?= $carpenter['image_location'] ?>' alt="Technician">
+                                        <div class="content">
+                                        <h6 class="sub-div-headings">Name: <?= $carpenter['fullname'] ?></h6>
+                                        <p>Profession: <?= $carpenter['profession'] ?></p>
+                                        <p><?= $carpenter['jobdescription'] ?></p>
+                                        <p>Availability: <span style="color: <?= ($carpenter['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $carpenter['availability'] ?></span></p>
+                                        </div>
+                                    </div>
+                                    
                                     <div style="display: flex; justify-content: space-between;">
                                         <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?= $carpenter['phone'] ?></span>
                                         <span class="Ratings" style="color:blue;"><span class="rate_border">RATE:</span> <?= $carpenter['ratings'] ?></span>
@@ -270,80 +277,6 @@ function showUpdateProfile() {
                         </a>
                     <?php } ?>
 
-                    <!-- <div class="sub-div" style="background-image: url('../images/dude_carpenter.png'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: Abdirahman Green</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Your dedicated carpentry ready to transform your ideas into masterful craftsmen, with over 5 years of hands-on experience in carpentry</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 500 - at most kshs 3000</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 4.0/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="sub-div" style="background-image: url('../images/bro_carpenter.png'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: John Doe</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Experienced carpenter specializing in custom furniture and woodworking projects.with over 6 years of hands-on experience in carpentry</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 800 - at most kshs 2500</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 4.2/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- <div class="sub-div">
-                        <div class="image-container">
-                            <img src="../images/bro_carpenter.png" alt="Carpenter Image" class="image">
-                        </div>
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: John Doe</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Experienced carpenter specializing in custom furniture and woodworking projects.</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 800 - at most kshs 2500</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 4.2/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    
-                    <!-- <div class="sub-div" style="background-image: url('../images/carpenter_stand.png'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: John Smith</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Skilled carpenter with attention to detail and a passion for delivering high-quality work.with over 5 years of hands-on experience in carpentry</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 700 - at most kshs 2500</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 4.5/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="sub-div" style="background-image: url('../images/female_carpenter-.png'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: Sarah Johnson</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Creative carpenter known for innovative designs and flawless execution.with over 3 years of hands-on experience in carpentry</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 600 - at most kshs 2200</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 4.1/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    
-                    <!-- <div class="sub-div" style="background-image: url('../images/mechanic-with-thumb-up-removebg-preview.png'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
-                        <div class="info">
-                            <h6 class="sub-div-headings">Name: Micheal Brown</h6>
-                            <p>Profession: Carpenter</p>
-                            <p>Reliable carpenter offering personalized services tailored to your needs.with over 5 years of hands-on experience in carpentry</p>
-                            <div style="display: flex; justify-content: space-between;">
-                                <span class="price_range"><b>Price Charging:</b> kshs 1000 - at most kshs 3000</span>
-                                <span class="Ratings"><span class="rate_border">RATE:</span> 3.8/5.0</span>
-                            </div>
-                        </div>
-                    </div> -->
-                    
                 </div>
                 
                 
@@ -364,13 +297,19 @@ function showUpdateProfile() {
                         'ratings' => $electrician['ratings']
                     ]));
                       ?>
-                    <a href="clientservice.php?data=<?= $data ?>">
-                    <div class="sub-div" style="background-image: url('<?=$electrician['image_location']?>'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
+                    <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                    <div class="sub-div">
                         <div class="info">
-                            <h6 class="sub-div-headings">Name: <?=$electrician['fullname']?></h6>
-                            <p>Profession: <?=$electrician['profession']?></p>
-                            <p><?=$electrician['jobdescription']?></p>
-                            <p>Availability: <span style="color: <?= ($electrician['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $electrician['availability'] ?></span></p>
+                            <div class="client-card">
+                                <img src="<?=$electrician["image_location"]?>" alt="Electrician"/>
+                                 <div class="content">
+                                 <h6 class="sub-div-headings">Name: <?=$electrician['fullname']?></h6>
+                                 <p>Profession: <?=$electrician['profession']?></p>
+                                 <p><?=$electrician['jobdescription']?></p>
+                                 <p>Availability: <span style="color: <?= ($electrician['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $electrician['availability'] ?></span></p>
+                                 </div>
+                            </div>
+                            
 
                             <div style="display: flex; justify-content: space-between;">
                                 <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?=$electrician['phone']?></span>
@@ -405,13 +344,19 @@ function showUpdateProfile() {
                             'ratings' => $laundry['ratings']
                         ]));
                         ?>
-                        <a href="clientservice.php?data=<?= $data ?>">
-                        <div class="sub-div" style="background-image: url('<?=$laundry['image_location']?>'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
+                        <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                        <div class="sub-div">
                             <div class="info">
-                                <h6 class="sub-div-headings">Name: <?=$laundry['fullname']?></h6>
-                                <p>Profession: <?=$laundry['profession']?></p>
-                                <p><?=$laundry['jobdescription']?></p>
-                                <p>Availability: <span style="color: <?= ($laundry['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $laundry['availability'] ?></span></p>
+                                <div class="client-card">
+                                    <img src="<?=$laundry['image_location']?>" alt="">
+                                    <div class="content">
+                                    <h6 class="sub-div-headings">Name: <?=$laundry['fullname']?></h6>
+                                    <p>Profession: <?=$laundry['profession']?></p>
+                                    <p><?=$laundry['jobdescription']?></p>
+                                    <p>Availability: <span style="color: <?= ($laundry['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $laundry['availability'] ?></span></p>
+                                    </div>
+                                </div>
+                                
 
                                 <div style="display: flex; justify-content: space-between;">
                                     <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?=$laundry['phone']?></span>
@@ -447,13 +392,19 @@ function showUpdateProfile() {
                                 'ratings' => $mover['ratings']
                             ]));
                              ?>
-                        <a href="clientservice.php?data=<?= $data ?>">
-                        <div class="sub-div" style="background-image: url('<?=$mover['image_location']?>'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
+                        <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                        <div class="sub-div">
                                 <div class="info">
-                                    <h6 class="sub-div-headings">Name: <?=$mover['fullname']?></h6>
-                                    <p>Profession: <?=$mover['profession']?></p>
-                                    <p><?=$mover['jobdescription']?></p>
-                                    <p>Availability: <span style="color: <?= ($mover['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $mover['availability'] ?></span></p>
+                                    <div class="client-card">
+                                        <img src="<?=$mover["image_location"]?>" alt="Mover">
+                                        <div class="content">
+                                        <h6 class="sub-div-headings">Name: <?=$mover['fullname']?></h6>
+                                        <p>Profession: <?=$mover['profession']?></p>
+                                        <p><?=$mover['jobdescription']?></p>
+                                        <p>Availability: <span style="color: <?= ($mover['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $mover['availability'] ?></span></p>
+                                        </div>
+                                    </div>
+                                    
 
                                     <div style="display: flex; justify-content: space-between;">
                                         <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?=$mover['phone']?></span>
@@ -532,14 +483,19 @@ function showUpdateProfile() {
                                     'ratings' => $plumber['ratings']
                                 ]));  
                                 ?>
-                        <a href="clientservice.php?data=<?= $data ?>">
-                            <div class="sub-div" style="background-image: url('<?=$plumber['image_location']?>'); background-size: contain; background-repeat: no-repeat; background-position: top left;">
+                        <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                            <div class="sub-div">
                                     <div class="info">
-                                        <h6 class="sub-div-headings">Name: <?=$plumber['fullname']?></h6>
-                                        <p>Profession: <?=$plumber['profession']?></p>
-                                        <p><?=$plumber['jobdescription']?></p>
-                                        <p>Availability: <span style="color: <?= ($plumber['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $plumber['availability'] ?></span></p>
+                                        <div class="client-card">
+                                            <img src="<?=$plumber["image_location"]?>" alt="Plumber">
+                                            <div class="content">
+                                            <h6 class="sub-div-headings">Name: <?=$plumber['fullname']?></h6>
+                                            <p>Profession: <?=$plumber['profession']?></p>
+                                            <p><?=$plumber['jobdescription']?></p>
+                                            <p>Availability: <span style="color: <?= ($plumber['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $plumber['availability'] ?></span></p>
 
+                                            </div>
+                                        </div>
                                         <div style="display: flex; justify-content: space-between;">
                                             <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?=$plumber['phone']?></span>
                                             <span class="Ratings" style="color:blue;"><span class="rate_border">RATE:</span> <?=$plumber['ratings']?></span>

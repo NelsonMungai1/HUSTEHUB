@@ -1,6 +1,7 @@
 <?php
 session_start();
-$con = mysqli_connect("localhost", "root", "", "hustlehub");
+// $con = mysqli_connect("localhost", "root", "", "hustlehub");
+include "../DB_connection.php";
 
 if (isset($_POST['techFeedback'])) {
     include '../DB_connection.php';

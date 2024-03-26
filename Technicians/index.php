@@ -317,7 +317,7 @@ if(isset($_SESSION['tid'])){
             </div> 
   
             <div class="box-container" style="display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap; gap: 50px;">  
-                <div class="box box1">
+                <div class="box box1" onclick="showTechnicians()">
                     <div class="text"> 
                     <h2 class="topic-heading"><?php echo $sumjobs; ?></h2> 
                     <h2 class="topic">Total Jobs</h2> 
@@ -329,7 +329,7 @@ if(isset($_SESSION['tid'])){
                         alt="Views">  -->
                 </div> 
   
-                <div class="box box2"> 
+                <div class="box box2" onclick="showClients()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $sumcompletes; ?></h2> 
                         <h2 class="topic">Completed</h2> 
@@ -342,7 +342,7 @@ if(isset($_SESSION['tid'])){
                 </div>  -->
                 </div>
   
-                <div class="box box3"> 
+                <div class="box box3" onclick="showapprovals()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $sumincompletes; ?></h2> 
                         <h2 class="topic">Incomplete</h2> 
@@ -354,7 +354,7 @@ if(isset($_SESSION['tid'])){
                         alt="comments">  -->
                 </div> 
   
-                <div class="box box4"> 
+                <div class="box box4" onclick="showfeedbacks()"> 
                     <div class="text"> 
                         <h2 class="topic-heading"><?php echo $ratings; ?></h2> 
                         <h2 class="topic">AVG Ratings</h2> 
