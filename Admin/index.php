@@ -487,7 +487,7 @@ if(isset($_SESSION['username'])){
                                 <td><?php echo $technician['fullname']; ?></td>
                                 <td><?php echo $technician['username']; ?></td>
                                 <td><?php echo $technician['nationalid']; ?></td>
-                                <td><?php echo $technician['phone']; ?></td>
+                                <td><a href="mailto:<?= $technician['email']?>"><?php echo $technician['phone']; ?></a></td>
                                 <td><?php echo $technician['profession']; ?></td>
                                 <td><?php echo $technician['ratings']; ?></td>
                                 <td><?php echo $technician['password']; ?></td>
@@ -545,7 +545,7 @@ if(isset($_SESSION['username'])){
                             <tr>
                                 <td><?php echo $client['fullname']; ?></td>
                                 <td><?php echo $client['username']; ?></td>
-                                <td><?php echo $client['email']; ?></td>
+                                <td><a href="mailto:<?= $client['email']?>"><?php echo $client['email']; ?></a></td>
                                 <td><?php echo $client['phone']; ?></td>
                                 <td><?php echo $client['gender']; ?></td>
                                 <td><?php echo $client['password']; ?></td>

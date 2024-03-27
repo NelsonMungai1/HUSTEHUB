@@ -13,8 +13,8 @@ if ($jid) {
         $stmt->execute([$completed, $jid]);
 
         if ($stmt->rowCount() > 0) {
-            $sm = "Job status updated! Login again to see changes";
-            header("Location: index.php?error=$sm&$data"); // Always exit after header redirect
+            $sm = "Job status updated!";
+            header("Location: index.php?success=$sm&$data"); // Always exit after header redirect
             exit();
         } else {
             throw new Exception("No rows affected by the update.");
