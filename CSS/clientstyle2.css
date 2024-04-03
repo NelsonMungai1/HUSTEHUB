@@ -17,3 +17,12 @@
 #card-link .sub-div{
     background-color: white;
 }
+#mainNav{
+    background: #034e36f1;
+}
+
+@media (max-width:440px){
+    #card-link .sub-div .info .client-card{
+        flex-direction: column;
+    }
+}

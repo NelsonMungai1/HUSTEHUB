@@ -66,7 +66,7 @@ if(isset($_SESSION['fname'])){
     /* Styles for anchor tags */
     a {
         color: inherit; /* Inherit color from parent */
-        text-decoration: none; /* Remove underline */
+        text-decoration: none; /*Remove underline*/
     }
 
     
@@ -89,8 +89,12 @@ if(isset($_SESSION['fname'])){
 
     .sub-div:hover {
         /*background-color: white; /*Change background color to white on hover */
-        border-color: red;/* Change border color to green on hover*/
+        /* border-color: red;Change border color to green on hover */
         box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
+    }
+    .sub-div:hover .content{
+        color:red;
+        text-decoration:none;
     }
     .sub-div2 {
         /* Your existing styles */
@@ -158,7 +162,7 @@ function showUpdateProfile() {
 <!------ Include the above in your HEAD tag ---------->
 <body>
     <!-- Navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background: #00563b;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);">
     <div class="container">
 
         <a class="navbar-brand js-scroll-trigger" href="#" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;color: goldenrod;">
@@ -297,19 +301,18 @@ function showUpdateProfile() {
                         'ratings' => $electrician['ratings']
                     ]));
                       ?>
-                    <a  id="card-link" href="clientservice.php?data=<?= $data ?>">
+                    <a id="card-link" href="clientservice.php?data=<?= $data ?>">
                     <div class="sub-div">
                         <div class="info">
-                            <div class="client-card">
+                            <div class="client-card" style="display: flex; justify-content: space-between; @media (max-width: 440px) { flex-direction: column; }">
                                 <img src="<?=$electrician["image_location"]?>" alt="Electrician"/>
-                                 <div class="content">
-                                 <h6 class="sub-div-headings">Name: <?=$electrician['fullname']?></h6>
-                                 <p>Profession: <?=$electrician['profession']?></p>
-                                 <p><?=$electrician['jobdescription']?></p>
-                                 <p>Availability: <span style="color: <?= ($electrician['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $electrician['availability'] ?></span></p>
-                                 </div>
+                                <div class="content">
+                                    <h6 class="sub-div-headings">Name: <?=$electrician['fullname']?></h6>
+                                    <p>Profession: <?=$electrician['profession']?></p>
+                                    <p><?=$electrician['jobdescription']?></p>
+                                    <p>Availability: <span style="color: <?= ($electrician['availability'] == 'Available') ? 'green' : 'red' ?>;"><?= $electrician['availability'] ?></span></p>
+                                </div>
                             </div>
-                            
 
                             <div style="display: flex; justify-content: space-between;">
                                 <span class="price_range" style="color:blue;"><span class="rate_border">Phone:</span><?=$electrician['phone']?></span>
@@ -317,13 +320,13 @@ function showUpdateProfile() {
                             </div>
 
                             <div style="display: flex; justify-content:center">
-                                        <a href="reviews.php?tid=<?= $electrician['technicianid']?>"><span class="review"> REVIEWS </span></a>
-                                        
+                                <a href="reviews.php?tid=<?= $electrician['technicianid']?>"><span class="review"> REVIEWS </span></a>
                             </div>
                             <br>
                         </div>
                     </div>
-                    </a>
+                </a>
+
                 <?php } ?>
                     
                    
