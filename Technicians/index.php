@@ -72,6 +72,30 @@ if(isset($_SESSION['tid'])){
 
 
 <style>
+    .box { 
+        height: 130px; 
+        width: 230px; 
+        border-radius: 20px; 
+        box-shadow: 3px 3px 10px rgba(1, 22, 18, 0.531); 
+        padding: 20px; 
+        display: flex; 
+        align-items: center; 
+        justify-content: space-around; 
+        cursor: pointer; 
+        transition: transform 0.3s ease-in-out; 
+    } 
+    .box:hover { 
+        transform: scale(1.04); 
+    }
+    .recent-Articles { 
+        font-size: 30px; 
+        font-weight: 600; 
+        color: #024463;
+        background-color: white;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px 20px;
+    } 
     .profheader{
         color: goldenrod;
         font-size: 15px;
