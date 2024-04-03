@@ -53,9 +53,41 @@ if(isset($_SESSION['fname'])){
 
 
 <style >
-    #myTab{
-        margin:0 auto;
+    /* #myTab{
+        margin-top:300px;
+        border:1px solid red;
+        display:inline-block;
+        text-align:left;
+        flex-direction:column;
+        width:100%;
     }
+    #myTab .nav-link{
+        border:1px solid red;
+        display:inline-block;
+        flex-direction:column;
+    }
+     */
+    /* stack the tabs vertically on small screens */
+    @media (max-width:768px) {
+        /* .nav-tabs{
+            display:flex;
+            flex-direction:column;
+            justify-content:space-between;
+        } */
+        /* .nav-item{
+            width:100%;
+        } */
+    }
+    /* even smaller screens */
+    /* @media(max-width:576px){
+        .nav-tabs .nav-link{
+            font-size:14px;
+        }
+        /* make tab content full-width on small screeens */
+       /* .tab-content .tab-pane{
+            padding:15px;
+        }
+    } */
      .form-control {
     border-radius: 0.75rem;
     }
@@ -148,7 +180,7 @@ if(isset($_SESSION['fname'])){
     }
 
     .review:hover{
-        background-color: greenyellow; /* Change background color on hover */
+        background-color:rgb(2, 105, 2);
     }
 
 </style>
@@ -483,7 +515,7 @@ function showUpdateProfile() {
                                         </span>
 
                                     </div>
-                                    <div style="display: flex; justify-content:center">
+                                    <div style="display: flex; justify-content:center; margin-top:20px">
                                         <a href="review.php?jid=<?= $job['jobid']?>"><span class="review"> REVIEW </span></a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a href="rate.php?tid=<?= $job['technicianid']?>"><span class="review"> RATE </span></a>
