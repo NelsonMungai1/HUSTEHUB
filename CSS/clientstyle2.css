@@ -20,6 +20,10 @@
 #mainNav{
     background: #034e36f1;
 }
+#updateprofile.card .card-body{
+    width:80%;
+
+}
 
 @media (max-width:440px){
     #card-link .sub-div .info .client-card{

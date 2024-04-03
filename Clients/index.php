@@ -53,6 +53,9 @@ if(isset($_SESSION['fname'])){
 
 
 <style >
+    #myTab{
+        margin:0 auto;
+    }
      .form-control {
     border-radius: 0.75rem;
     }
@@ -79,6 +82,7 @@ if(isset($_SESSION['fname'])){
     background-color: bisque;
     border: 1px solid #ccc;
     border-radius: 30px;
+    width:80%;
     margin: 20px;
     padding: 5px;
     }
@@ -90,21 +94,44 @@ if(isset($_SESSION['fname'])){
     .sub-div:hover {
         /*background-color: white; /*Change background color to white on hover */
         /* border-color: red;Change border color to green on hover */
-        box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33);
+        /* box-shadow: 4px 4px 4px rgba(60, 60, 93, 0.33); */
+        box-shadow: 0px 0px 10px rgba(0, 0,0, 0.2);
+        transform:scale(1.05);
     }
     .sub-div:hover .content{
-        color:red;
+        color:#000;
         text-decoration:none;
     }
     .sub-div2 {
         /* Your existing styles */
         cursor: pointer; /* Change cursor to pointer on hover */
         transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color */
+        width:100%;
+        transition:box-shadow 0.3s ease-in-out;
     }
-
+    .sub-div2 .info2{
+        /* border:1px solid red; */
+        width:80%;
+        margin:auto;
+    }
+    .sub-div2 .price_range{
+        font-weight:bold;
+    }
+    .sub_div2 .rate_border{
+        font-style:italic;
+    }
+    .sub-div2 .info2 p{ 
+        text-align:left;
+    }
     .sub-div2:hover {
-        background-color: white; /* Change background color to white on hover */
-        border-color: brown; /* Change border color to green on hover */
+        box-shadow: 0px 0px 10px rgba(0, 0,0, 0.2);
+        transform:scale(1.05);
+    }
+    .sub-div2 .review{
+        padding:5px 10px;
+        background-color:#00563b;
+        color:#fff;
+        text-decoration:none;
     }
     .card{
         margin-top: 100px;
@@ -524,7 +551,7 @@ function showUpdateProfile() {
         
     </div>
 </div>
-<div class="card" id="updateprofile" style="font-family: 'IBM Plex Sans', sans-serif; max-width: 75%; margin: 0 auto; border-radius: 10px;display:block;">
+    <div class="card" id="updateprofile" style="font-family: 'IBM Plex Sans', sans-serif; max-width: 75%; margin: 0 auto; border-radius: 10px;display:block;">
             <div class="card-body">
               <center>
                 <?php if (isset($_GET['error'])) { ?>
